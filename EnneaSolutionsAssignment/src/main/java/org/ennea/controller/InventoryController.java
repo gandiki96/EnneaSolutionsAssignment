@@ -83,7 +83,7 @@ public class InventoryController {
 		try {
 
 			log.info("InventoryController - fetchStockBySupplier - Start");
-			pageNo = pageNo != null ? pageNo : 1;
+			pageNo = pageNo != null ? pageNo-1 : 0;
 			size = size != null ? size : 10;
 			List<ProductsWIthStockDto> productList = inventoryService.fetchStockBySupplier(request,product,pageNo,size);
 			log.info("InventoryController - fetchStockBySupplier - End");
@@ -105,7 +105,7 @@ public class InventoryController {
 
 		try {
 			log.info("InventoryController - getProducts - Start");
-			pageNo = pageNo != null ? pageNo : 1;
+			pageNo = pageNo != null ? pageNo-1 : 0;
 			size = size != null ? size : 10;
 			List<InventoryModel> productsList = inventoryService.getProducts(pageNo, size);
 			log.info("InventoryController - getProducts - End ");			
