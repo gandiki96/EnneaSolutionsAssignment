@@ -1,0 +1,9 @@
+org\ennea\config\LoggingAspect.class
+org\ennea\mapper\CsvBeanMapper.class
+org\ennea\config\EnneaDBConfig.class
+org\ennea\mapper\CsvBean.class
+org\ennea\model\InventoryModel.class
+org\ennea\repository\InventoryRepository.class
+org\ennea\EnneaSolutionsAssignmentApplication.class
+org\ennea\service\InventoryService.class
+org\ennea\controller\InventoryController.class
