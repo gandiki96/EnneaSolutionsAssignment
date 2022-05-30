@@ -18,7 +18,7 @@ public interface InventoryRepository extends JpaRepository<InventoryModel, Long>
 
 	
 	@Query(value = "select * from enneadev.inventory where enneadev.inventory.supplier in :suppliers and enneadev.inventory.stock > 0", nativeQuery = true)
-	Page<InventoryModel> findBySupplier(@Param("suppliers")List<String> suppliers, Pageable page);
+	Page<InventoryModel> fetchWithSupplierData(@Param("suppliers")List<String> suppliers, Pageable page);
 
 	@Query(value ="select * from enneadev.inventory et where et.expiry_date != '/  /' AND cast(et.expiry_date as date) > now()",nativeQuery = true)
 	Page<InventoryModel> getProducts(Pageable page);
