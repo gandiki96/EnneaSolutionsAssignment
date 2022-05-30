@@ -10,10 +10,10 @@ import lombok.Data;
 public class CsvBeanMapper{
 
     @CsvBindByName(column = "code")
-    private String code;
+    private String productCode;
     
     @CsvBindByName(column = "name")
-    private String name;
+    private String productName;
     
     @CsvBindByName(column = "batch")
     private String batch;
@@ -33,7 +33,7 @@ public class CsvBeanMapper{
     private String rate;
     
     @CsvBindByName(column = "exp")
-    private String exp;
+    private String date;
     
     @CsvBindByName(column = "company")
     private String company;
